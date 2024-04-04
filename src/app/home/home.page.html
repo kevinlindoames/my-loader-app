@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Ionic Angular Loader Example
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="startLoader()">Start Loader</ion-button>
+  <ion-button expand="block" (click)="startLoaderWithConfig1()">Start Loader with Config 1</ion-button>
+  <ion-button expand="block" (click)="startLoaderWithConfig2()">Start Loader with Config 2</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Mostrar Loader con la primera configuración -->
+  <app-loader *ngIf="showLoader1" 
+              [images1]="['image1.jpg', 'image2.jpg', 'image3.jpg']" 
+              [texts1]="['Texto 1', 'Texto 2', 'Texto 3']">
+  </app-loader>
+
+  <!-- Mostrar Loader con la segunda configuración -->
+  <app-loader *ngIf="showLoader2" 
+              [images2]="['image4.jpg', 'image5.jpg', 'image6.jpg']" 
+              [texts2]="['Texto 4', 'Texto 5', 'Texto 6']">
+  </app-loader>
 </ion-content>

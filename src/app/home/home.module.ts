@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
+import { LoaderComponent } from '../loader/loader.component'; 
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { FullscreenDirective } from '../directives/fullscreen.directive';
 
 
 @NgModule({
@@ -12,8 +14,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, LoaderComponent,FullscreenDirective]
 })
 export class HomePageModule {}
