@@ -1,0 +1,7 @@
+{
+  "name": "my-loader-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
